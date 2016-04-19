@@ -26,11 +26,12 @@ public class TourSearch {
         int year = date.getYear();
         int month = date.getMonth();
         int day = date.getDate();
+        String str = "";
         if (day < 10) {
-            String str = ("0" + day + "." + (month+1) + "." + year);
+            str = ("0" + day + "." + (month+1) + "." + year);
         }
         else {
-            String str = ("" + day + "." + (month+1) + "." + year);
+            str = ("" + day + "." + (month+1) + "." + year);
         }
         functionality.daytours.SearchCriteria scrit = new functionality.daytours.SearchCriteria(str, type, location, numSeats);
         ArrayList<functionality.daytours.Trip> al = new ArrayList<functionality.daytours.Trip>();
