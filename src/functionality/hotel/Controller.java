@@ -175,7 +175,7 @@ public class Controller {
 //	         System.out.println(" Name: " + name);
 //	         System.out.println(" loccity: " + locCity);
 //	         System.out.println(" locstreet: " + locStreet);
-	         Hotel hotel = new Hotel(hotid, name, locCity, locStreet);
+	         Hotel hotel = new Hotel(name, locCity, "Double room", 23999);
 	         return hotel;
 	    }
 		return null;	    
