@@ -26,7 +26,7 @@ public class FlightSearch {
         return flights;
     }
     
-    private functionality.flight.Flight[] getCurrentFlights() {
+    public functionality.flight.Flight[] getCurrentFlights() {
         return currentFlights;
     }
     
