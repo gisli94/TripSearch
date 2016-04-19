@@ -17,13 +17,22 @@ public class Result extends javax.swing.JFrame {
      */
     public Result() {
         //initComponents();
-        javax.swing.JPanel[] hotels = new javax.swing.JPanel[3];
+        javax.swing.JPanel[] hotels = new javax.swing.JPanel[7];
         functionality.Hotel h1 = new functionality.Hotel("Hótel Adam", "Reykjavík", "Double room", 24999);
         functionality.Hotel h2 = new functionality.Hotel("Hótel Natura", "Reykjavík", "Single room", 14999);
         functionality.Hotel h3 = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        functionality.Hotel h4 = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        functionality.Hotel h5 = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        functionality.Hotel h6 = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        functionality.Hotel h7 = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
         hotels[0] = createTicket(h1);
         hotels[1] = createTicket(h2);
         hotels[2] = createTicket(h3);
+        hotels[3] = createTicket(h4);
+        hotels[4] = createTicket(h5);
+        hotels[5] = createTicket(h6);
+        hotels[6] = createTicket(h7);
+        
         currentResults = hotels;
     }
     
@@ -42,13 +51,15 @@ public class Result extends javax.swing.JFrame {
 
         Hotel.setBackground(new java.awt.Color(153, 153, 255));
 
-        Name.setText("Hótel Adam");
+        Name.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        Name.setText(h.getName());
 
-        Type.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        Type.setText("Double room");
+        Type.setText(h.getType());
 
-        Location.setText("Reykjavík");
-        Price.setText("24.999");
+        Location.setText(h.getLocation());
+
+        Price.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        Price.setText(String.valueOf(h.getPrice()));
 
         javax.swing.GroupLayout HotelLayout = new javax.swing.GroupLayout(Hotel);
         Hotel.setLayout(HotelLayout);
@@ -59,12 +70,14 @@ public class Result extends javax.swing.JFrame {
                 .addGroup(HotelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HotelLayout.createSequentialGroup()
                         .addComponent(Name)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
                         .addComponent(Type))
                     .addGroup(HotelLayout.createSequentialGroup()
                         .addComponent(Location)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
-                        .addComponent(Price)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HotelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Price)))
                 .addContainerGap())
         );
         HotelLayout.setVerticalGroup(
@@ -74,8 +87,10 @@ public class Result extends javax.swing.JFrame {
                 .addGroup(HotelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Name)
                     .addComponent(Type))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Location)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(Price)
                 .addContainerGap())
         );
         
@@ -91,17 +106,82 @@ public class Result extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Flight = new javax.swing.JPanel();
+        departureLocation = new javax.swing.JLabel();
+        arrivalLocation = new javax.swing.JLabel();
+        departureTime = new javax.swing.JLabel();
+        airline = new javax.swing.JLabel();
+        price = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Flight.setBackground(new java.awt.Color(153, 153, 255));
+
+        departureLocation.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        departureLocation.setText("KEF");
+
+        arrivalLocation.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        arrivalLocation.setText("LHR");
+
+        departureTime.setText("19:30");
+
+        airline.setText("Icelandair");
+
+        price.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        price.setText("45000");
+
+        javax.swing.GroupLayout FlightLayout = new javax.swing.GroupLayout(Flight);
+        Flight.setLayout(FlightLayout);
+        FlightLayout.setHorizontalGroup(
+            FlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FlightLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(FlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FlightLayout.createSequentialGroup()
+                        .addComponent(departureTime)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FlightLayout.createSequentialGroup()
+                        .addComponent(departureLocation)
+                        .addGap(18, 18, 18)
+                        .addComponent(arrivalLocation)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 231, Short.MAX_VALUE)
+                        .addComponent(airline))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FlightLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(price)))
+                .addContainerGap())
+        );
+        FlightLayout.setVerticalGroup(
+            FlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FlightLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(FlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(departureLocation)
+                        .addComponent(arrivalLocation))
+                    .addComponent(airline))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(departureTime)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(price)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Flight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Flight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         pack();
@@ -143,5 +223,11 @@ public class Result extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Flight;
+    private javax.swing.JLabel airline;
+    private javax.swing.JLabel arrivalLocation;
+    private javax.swing.JLabel departureLocation;
+    private javax.swing.JLabel departureTime;
+    private javax.swing.JLabel price;
     // End of variables declaration//GEN-END:variables
 }
