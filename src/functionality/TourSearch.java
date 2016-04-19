@@ -8,7 +8,6 @@ package functionality;
 import functionality.daytours.SearchCriteriaIsInvalidException;
 import java.util.ArrayList;
 import java.util.Date;
-import functionality.daytours.Trip;
 
 /**
  *
@@ -27,14 +26,20 @@ public class TourSearch {
         int year = date.getYear();
         int month = date.getMonth();
         int day = date.getDate();
-        String str = ("" + day + "." + month+1 + "." + year);
+        if (day < 10) {
+            String str = ("0" + day + "." + (month+1) + "." + year);
+        }
+        else {
+            String str = ("" + day + "." + (month+1) + "." + year);
+        }
         functionality.daytours.SearchCriteria scrit = new functionality.daytours.SearchCriteria(str, type, location, numSeats);
         ArrayList<functionality.daytours.Trip> al = new ArrayList<functionality.daytours.Trip>();
         al = sc.searchForTrips(scrit);
+        functionality.daytours.Trip[] trips = new functionality.daytours.Trip[al.size()];
         for (int i = 0; i < al.size(); i++) {
-            
+            trips[i] = al.get(i);
         }
-        return null;
+        return trips;
     }
     
     private functionality.daytours.Trip[] getCurrentTours() {

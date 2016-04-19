@@ -16,6 +16,12 @@ public class Test {
     public static void main (String[] args) {
         Date date = new Date("09.02.1994");
         System.out.println(date);
+        int year = date.getYear();
+        int month = date.getMonth();
+        int day = date.getDate();
+        String str = ("" + day + "." + month+1 + "." + year);
+        System.out.println(str);
     }
+    
     
 }
