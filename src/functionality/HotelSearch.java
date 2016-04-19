@@ -15,13 +15,13 @@ import java.util.Date;
  */
 public class HotelSearch {
     
-    private Hotel[] currentHotels;
+    private functionality.hotel.Hotel[] currentHotels;
     
     public HotelSearch(String loc, Date sT, Date fT, int nOG) throws SQLException {
         currentHotels = searchHotels(loc, sT, fT, nOG);
     }
     
-    public Hotel[] searchHotels(String location, Date startTime, Date finishTime, int numberOfGuests) throws SQLException {
+    public functionality.hotel.Hotel[] searchHotels(String location, Date startTime, Date finishTime, int numberOfGuests) throws SQLException {
         
         int start = formatDate(startTime);
         int finish = formatDate(finishTime);
@@ -37,11 +37,11 @@ public class HotelSearch {
             }
         }
         h = getRidOfNulls(h);
-        Hotel[] hotels = createHotelArray(h, rooms);
-        return hotels;
+        //Hotel[] hotels = createHotelArray(h, rooms);
+        return h;
     }
     
-    public Hotel[] getCurrentHotels() {
+    public functionality.hotel.Hotel[] getCurrentHotels() {
         return currentHotels;
     }
     
@@ -108,6 +108,7 @@ public class HotelSearch {
         return hot;
     }
     
+    /*
     private Hotel[] createHotelArray(functionality.hotel.Hotel[] h, functionality.hotel.Room[] r) throws SQLException {
         int[] hotelIds = new int[r.length];
         for (int i = 0; i < r.length; i++) {
@@ -125,4 +126,5 @@ public class HotelSearch {
         }
         return hot;
     }
+    */
 }

@@ -11,15 +11,15 @@ package other;
  */
 public class Ticket {
     
-    private functionality.Flight flight;
+    private functionality.flight.Flight flight;
     private UserInfo userInfo;
 
-    public Ticket( functionality.Flight f, UserInfo u) {
+    public Ticket( functionality.flight.Flight f, UserInfo u) {
 	flight = f;
 	userInfo = u;
     }
 
-    public functionality.Flight getFlight() {
+    public functionality.flight.Flight getFlight() {
 	return flight;
     }
 
