@@ -31,7 +31,7 @@ public class ScrollPaneTest extends javax.swing.JFrame {
         
         functionality.flight.Flight flightOut = new functionality.flight.Flight("Icelandair", 5, 200, "LHR", "KEF", 25999, 20, new Date());
         functionality.flight.Flight flightHome = new functionality.flight.Flight("Icelandair", 5, 200, "KEF", "LHR", 25999, 20, new Date());
-        functionality.hotel.Hotel hotel = new functionality.hotel.Hotel(255, "Hótel Adam", "Reykjavík", "Grettisgata");
+        functionality.hotel.Hotel hotel = new functionality.hotel.Hotel("Hótel Adam", "Reykjavík", "Double Room", 24999);
         
         other.UserInfo userinfo = new other.UserInfo("Skúli Ingvarsson", "Granaskjól 90", "7705747");
         GUI.Ticket.createTicket(container, userinfo, flightOut, flightHome, hotel, trips[0]);

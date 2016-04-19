@@ -13,11 +13,11 @@ import javax.swing.JComponent;
  */
 public class TripList {
     
-    private static functionality.Trip selectedTrip;
+    private static functionality.daytours.Trip selectedTrip;
     private static javax.swing.JPanel selectedTripFrame;
     
     // Returns a JPanel with the trip results from trips
-    public static javax.swing.JPanel displayTrips(functionality.Trip[] trips, javax.swing.JPanel container) {
+    public static javax.swing.JPanel displayTrips(functionality.daytours.Trip[] trips, javax.swing.JPanel container) {
         selectedTripFrame = null;
         
         javax.swing.JPanel[] tripPanels = new javax.swing.JPanel[trips.length];
@@ -45,7 +45,7 @@ public class TripList {
     }
     
     // Creates a ticket with information about hotel h
-    private static javax.swing.JPanel createTicket(functionality.Trip t) {
+    private static javax.swing.JPanel createTicket(functionality.daytours.Trip t) {
         javax.swing.JPanel Trip = new javax.swing.JPanel();
         javax.swing.JLabel type = new javax.swing.JLabel();
         javax.swing.JLabel duration = new javax.swing.JLabel();
@@ -113,7 +113,7 @@ public class TripList {
         return Trip;
     }
     
-    private static void TripMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.Trip trip) {                                    
+    private static void TripMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.daytours.Trip trip) {                                    
         frame.setBackground(new java.awt.Color(0, 255, 0));
         if (selectedTripFrame != null) {
             selectedTripFrame.setBackground(new java.awt.Color(153, 153, 255));

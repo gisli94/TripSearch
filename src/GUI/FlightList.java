@@ -13,11 +13,11 @@ import javax.swing.JComponent;
  */
 public class FlightList {
     
-    private static functionality.Flight selectedFlight;
+    private static functionality.flight.Flight selectedFlight;
     private static javax.swing.JPanel selectedFlightFrame;
     
     // Returns a JPanel with the flight results from flights
-    public static javax.swing.JPanel displayFlights(functionality.Flight[] flights, javax.swing.JPanel container) {
+    public static javax.swing.JPanel displayFlights(functionality.flight.Flight[] flights, javax.swing.JPanel container) {
         selectedFlightFrame = null;
         
         javax.swing.JPanel[] flightPanels = new javax.swing.JPanel[flights.length];
@@ -45,7 +45,7 @@ public class FlightList {
     }
     
     // Creates a ticket with information about hotel h
-    private static javax.swing.JPanel createTicket(functionality.Flight f) {
+    private static javax.swing.JPanel createTicket(functionality.flight.Flight f) {
         javax.swing.JPanel Flight = new javax.swing.JPanel();
         javax.swing.JLabel departureLocation = new javax.swing.JLabel();
         javax.swing.JLabel arrivalLocation = new javax.swing.JLabel();
@@ -61,17 +61,17 @@ public class FlightList {
         });
 
         departureLocation.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        departureLocation.setText(f.getDepartureLocation());
+        departureLocation.setText(f.getDeparture());
 
         arrivalLocation.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        arrivalLocation.setText(f.getArrivalLocation());
+        arrivalLocation.setText(f.getArrival());
 
-        departureTime.setText(f.getDepartureTime().toString());
+        departureTime.setText(f.getDateAndTime().toString());
 
-        airline.setText(f.getAirline());
+        airline.setText(f.getCompany());
 
         price.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        price.setText(String.valueOf(f.getPrice()));
+        price.setText(String.valueOf(f.getStartPrice()));
 
         javax.swing.GroupLayout FlightLayout = new javax.swing.GroupLayout(Flight);
         Flight.setLayout(FlightLayout);
@@ -113,7 +113,7 @@ public class FlightList {
         return Flight;
     }
     
-    private static void FlightMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.Flight flight) {                                    
+    private static void FlightMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.flight.Flight flight) {                                    
         frame.setBackground(new java.awt.Color(0, 255, 0));
         if (selectedFlightFrame != null) {
             selectedFlightFrame.setBackground(new java.awt.Color(153, 153, 255));

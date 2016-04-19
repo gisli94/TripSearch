@@ -225,7 +225,7 @@
                                               <Component id="FromYear3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="137" max="32767" attributes="0"/>
+                                      <EmptySpace pref="10" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="LabelTo3" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="LabelCTicket" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -270,7 +270,7 @@
                                           <Component id="LocationBox7" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="LabelCTicket" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                                      <EmptySpace pref="11" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -591,7 +591,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="SearchOptions2" pref="894" max="32767" attributes="0"/>
+                                  <Component id="SearchOptions2" pref="923" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="SearchButton2" min="-2" pref="258" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -678,7 +678,7 @@
                                           <Component id="NoB" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="LocationBox2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                                      <EmptySpace pref="54" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1012,7 +1012,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="SearchOptions" pref="894" max="32767" attributes="0"/>
+                                  <Component id="SearchOptions" pref="926" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="SearchButton" min="-2" pref="258" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1123,7 +1123,7 @@
                                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="LocationBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="31" max="32767" attributes="0"/>
+                                      <EmptySpace pref="28" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1522,10 +1522,8 @@
                                                           <EmptySpace max="32767" attributes="0"/>
                                                           <Component id="BoxEmail" min="-2" pref="184" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="LabelDate1" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="LabalATicket1" alignment="0" max="32767" attributes="0"/>
-                                                      </Group>
+                                                      <Component id="LabelDate1" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="LabalATicket1" alignment="0" max="32767" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <Component id="LabelWindow1" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>

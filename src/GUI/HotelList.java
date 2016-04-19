@@ -12,11 +12,11 @@ import javax.swing.JComponent;
  * @author skulii
  */
 public class HotelList {
-    private static functionality.Hotel selectedHotel;
+    private static functionality.hotel.Hotel selectedHotel;
     private static javax.swing.JPanel selectedHotelFrame;
     
     // Returns a JPanel with the hotel results from hotels
-    public static javax.swing.JPanel displayHotels(functionality.Hotel[] hotels, javax.swing.JPanel container) {
+    public static javax.swing.JPanel displayHotels(functionality.hotel.Hotel[] hotels, javax.swing.JPanel container) {
         selectedHotelFrame = null;
         
         javax.swing.JPanel[] hotelPanels = new javax.swing.JPanel[hotels.length];
@@ -44,7 +44,7 @@ public class HotelList {
     }
     
     // Creates a ticket with information about hotel h
-    private static javax.swing.JPanel createTicket(functionality.Hotel h) {
+    private static javax.swing.JPanel createTicket(functionality.hotel.Hotel h) {
         javax.swing.JPanel Hotel = new javax.swing.JPanel();
         javax.swing.JLabel Name = new javax.swing.JLabel();
         javax.swing.JLabel Type = new javax.swing.JLabel();
@@ -104,7 +104,7 @@ public class HotelList {
         return Hotel;
     }
     
-    private static void HotelMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.Hotel hotel) {                                    
+    private static void HotelMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.hotel.Hotel hotel) {                                    
         frame.setBackground(new java.awt.Color(0, 255, 0));
         if (selectedHotelFrame != null) {
             selectedHotelFrame.setBackground(new java.awt.Color(153, 153, 255));
