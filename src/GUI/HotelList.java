@@ -12,9 +12,13 @@ import javax.swing.JComponent;
  * @author skulii
  */
 public class HotelList {
+    private static functionality.Hotel selectedHotel;
+    private static javax.swing.JPanel selectedHotelFrame;
     
     // Returns a JPanel with the hotel results from hotels
     public static javax.swing.JPanel displayHotels(functionality.Hotel[] hotels, javax.swing.JPanel container) {
+        selectedHotelFrame = null;
+        
         javax.swing.JPanel[] hotelPanels = new javax.swing.JPanel[hotels.length];
         for (int i=0;i<hotels.length;i++) {
             hotelPanels[i] = createTicket(hotels[i]);
@@ -100,7 +104,12 @@ public class HotelList {
         return Hotel;
     }
     
-    private static void HotelMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JComponent frame, functionality.Hotel hotel) {                                    
-        javax.swing.JOptionPane.showMessageDialog(frame, "Hotel with name" + hotel.getName() + " chosen.");
+    private static void HotelMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.Hotel hotel) {                                    
+        frame.setBackground(new java.awt.Color(0, 255, 0));
+        if (selectedHotelFrame != null) {
+            selectedHotelFrame.setBackground(new java.awt.Color(153, 153, 255));
+        }
+        selectedHotelFrame = frame;
+        selectedHotel = hotel;
     }  
 }

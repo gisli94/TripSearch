@@ -49,9 +49,9 @@ public class ScrollPaneTest extends javax.swing.JFrame {
         GUI.Result res = new GUI.Result();
         javax.swing.JPanel[] results = res.getResults();
         
-        //GUI.HotelList.displayHotels(hotels, container);
+        GUI.HotelList.displayHotels(hotels, container);
         //GUI.FlightList.displayFlights(flights, container);
-        GUI.TripList.displayTrips(trips, container);
+        //GUI.TripList.displayTrips(trips, container);
         // Display them
         //displayResults(results, container);
     }

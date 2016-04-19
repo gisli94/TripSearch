@@ -13,8 +13,13 @@ import javax.swing.JComponent;
  */
 public class TripList {
     
+    private static functionality.Trip selectedTrip;
+    private static javax.swing.JPanel selectedTripFrame;
+    
     // Returns a JPanel with the trip results from trips
     public static javax.swing.JPanel displayTrips(functionality.Trip[] trips, javax.swing.JPanel container) {
+        selectedTripFrame = null;
+        
         javax.swing.JPanel[] tripPanels = new javax.swing.JPanel[trips.length];
         for (int i=0;i<trips.length;i++) {
             tripPanels[i] = createTicket(trips[i]);
@@ -108,8 +113,13 @@ public class TripList {
         return Trip;
     }
     
-    private static void TripMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JComponent frame, functionality.Trip trip) {                                    
-        javax.swing.JOptionPane.showMessageDialog(frame, "Trip with date" + trip.getDate() + " chosen.");
+    private static void TripMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.Trip trip) {                                    
+        frame.setBackground(new java.awt.Color(0, 255, 0));
+        if (selectedTripFrame != null) {
+            selectedTripFrame.setBackground(new java.awt.Color(153, 153, 255));
+        }
+        selectedTripFrame = frame;
+        selectedTrip = trip;
     }   
 }
 

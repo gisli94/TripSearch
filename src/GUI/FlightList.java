@@ -13,8 +13,13 @@ import javax.swing.JComponent;
  */
 public class FlightList {
     
+    private static functionality.Flight selectedFlight;
+    private static javax.swing.JPanel selectedFlightFrame;
+    
     // Returns a JPanel with the flight results from flights
     public static javax.swing.JPanel displayFlights(functionality.Flight[] flights, javax.swing.JPanel container) {
+        selectedFlightFrame = null;
+        
         javax.swing.JPanel[] flightPanels = new javax.swing.JPanel[flights.length];
         for (int i=0;i<flights.length;i++) {
             flightPanels[i] = createTicket(flights[i]);
@@ -108,7 +113,12 @@ public class FlightList {
         return Flight;
     }
     
-    private static void FlightMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JComponent frame, functionality.Flight flight) {                                    
-        javax.swing.JOptionPane.showMessageDialog(frame, "Flight with price" + flight.getPrice() + " chosen.");
+    private static void FlightMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.Flight flight) {                                    
+        frame.setBackground(new java.awt.Color(0, 255, 0));
+        if (selectedFlightFrame != null) {
+            selectedFlightFrame.setBackground(new java.awt.Color(153, 153, 255));
+        }
+        selectedFlightFrame = frame;
+        selectedFlight = flight;
     }   
 }
