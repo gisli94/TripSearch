@@ -48,6 +48,11 @@ public class HotelList {
         javax.swing.JLabel Price = new javax.swing.JLabel();
 
         Hotel.setBackground(new java.awt.Color(153, 153, 255));
+        Hotel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HotelMouseClicked(evt, Hotel, h);
+            }
+        });
 
         Name.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         Name.setText(h.getName());
@@ -94,4 +99,8 @@ public class HotelList {
         
         return Hotel;
     }
+    
+    private static void HotelMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JComponent frame, functionality.Hotel hotel) {                                    
+        javax.swing.JOptionPane.showMessageDialog(frame, "Hotel with name" + hotel.getName() + " chosen.");
+    }  
 }

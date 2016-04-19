@@ -49,6 +49,11 @@ public class FlightList {
         javax.swing.JLabel price = new javax.swing.JLabel();
 
         Flight.setBackground(new java.awt.Color(153, 153, 255));
+        Flight.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FlightMouseClicked(evt, Flight, f);
+            }
+        });
 
         departureLocation.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         departureLocation.setText(f.getDepartureLocation());
@@ -102,4 +107,8 @@ public class FlightList {
         
         return Flight;
     }
+    
+    private static void FlightMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JComponent frame, functionality.Flight flight) {                                    
+        javax.swing.JOptionPane.showMessageDialog(frame, "Flight with price" + flight.getPrice() + " chosen.");
+    }   
 }

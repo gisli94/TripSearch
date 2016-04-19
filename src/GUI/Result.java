@@ -116,6 +116,11 @@ public class Result extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Flight.setBackground(new java.awt.Color(153, 153, 255));
+        Flight.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FlightMouseClicked(evt);
+            }
+        });
 
         departureLocation.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         departureLocation.setText("KEF");
@@ -186,6 +191,10 @@ public class Result extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void FlightMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FlightMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FlightMouseClicked
 
     /**
      * @param args the command line arguments
