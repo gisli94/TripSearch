@@ -5,8 +5,6 @@
  */
 package functionality.flight;
 
-package src.Main;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

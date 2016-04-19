@@ -15,13 +15,14 @@ public class FlightSearch {
     
     Flight[] currentFlights;
     
-    public FlightSearch(String departureLocation, String arrivalLocation, Date startTime, Date finishTime, boolean flexDates) {
-        currentFlights = searchFlights(departureLocation, arrivalLocation, startTime, finishTime, flexDates);
+    public FlightSearch(String departureLocation, String arrivalLocation, int noOfAdults, int noOfChildren, Date startTime, boolean flexDates) {
+        currentFlights = searchFlights(departureLocation, arrivalLocation, noOfAdults, noOfChildren, startTime, flexDates);
     }
     
-    private Flight[] searchFlights(String departureLocation, String arrivalLocation, Date startTime, Date finishTime, boolean flexDates) {
+    private Flight[] searchFlights(String departureLocation, String arrivalLocation, int noOfAdults, int noOfChildren, Date startTime, boolean flexDates) {
+        functionality.flight.SearchController sc = new functionality.flight.SearchController();
         if (!flexDates) {
-            Flight[] flights = functionality.flight.SearchController.searchOne(departureLocation, arrivalLocation, );
+            functionality.flight.Flight[] flights = sc.searchOne(departureLocation, arrivalLocation, noOfAdults, noOfChildren, startTime, flexDates);
         }
         return null;
     }
