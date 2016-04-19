@@ -20,7 +20,9 @@ public class FlightSearch {
     }
     
     private Flight[] searchFlights(String departureLocation, String arrivalLocation, Date startTime, Date finishTime, boolean flexDates) {
-        //
+        if (!flexDates) {
+            Flight[] flights = functionality.flight.SearchController.searchOne(departureLocation, arrivalLocation, );
+        }
         return null;
     }
     

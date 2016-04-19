@@ -19,7 +19,7 @@ public class Ticket {
 	userInfo = u;
     }
 
-    public Flight getFlight() {
+    public functionality.Flight getFlight() {
 	return flight;
     }
 
