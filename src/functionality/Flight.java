@@ -16,16 +16,16 @@ public class Flight {
     private String departureLocation;
     private String arrivalLocation;
     private Date departureTime;
-    private Date arrivalTime;
+    //private Date arrivalTime;
     private int availableSeats;
     private String airline;
     private int price;
     
-    public Flight(String dl, String al, Date dt, Date at, int as, String airl, int p) {
+    public Flight(String dl, String al, Date dt,/* Date at,*/ int as, String airl, int p) {
         departureLocation = dl;
         arrivalLocation = al;
         departureTime = dt;
-        arrivalTime = at;
+        //arrivalTime = at;
         availableSeats = as;
         airline = airl;
         price = p;
@@ -43,9 +43,11 @@ public class Flight {
         return departureTime;
     }
     
+    /*
     public Date getArrivalTime() {
         return arrivalTime;
     }
+    */
     
     public int getAvailableSeats() {
         return availableSeats;
