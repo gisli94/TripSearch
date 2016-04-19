@@ -38,11 +38,20 @@ public class ScrollPaneTest extends javax.swing.JFrame {
         flights[3] = new functionality.Flight("KEF", "LHR", new Date(), 5, "Icelandair", 24999);
         flights[4] = new functionality.Flight("KEF", "LHR", new Date(), 5, "Icelandair", 24999);
         
+        functionality.Trip[] trips = new functionality.Trip[5];
+        
+        trips[0] = new functionality.Trip(0, "Sightseeing", "20/04/2016", "8:00", "7:30", "Golden Circle", 10, 8, 24999);
+        trips[1] = new functionality.Trip(1, "Glacier", "19/04/2016", "8:00", "7:30", "Langjökull", 10, 8, 54999);
+        trips[2] = new functionality.Trip(2, "Snowmobiling", "21/04/2016", "8:00", "8:30", "Vatnajökull", 10, 8, 104999);
+        trips[3] = new functionality.Trip(3, "Northern Lights", "19/04/2016", "20:00", "4:00", "Suðurnes", 10, 8, 24999);
+        trips[4] = new functionality.Trip(4, "Sightseeing", "22/04/2016", "9:00", "7:30", "Suðurland", 10, 8, 24999);
+        
         GUI.Result res = new GUI.Result();
         javax.swing.JPanel[] results = res.getResults();
         
         //GUI.HotelList.displayHotels(hotels, container);
-        GUI.FlightList.displayFlights(flights, container);
+        //GUI.FlightList.displayFlights(flights, container);
+        GUI.TripList.displayTrips(trips, container);
         // Display them
         //displayResults(results, container);
     }

@@ -13,7 +13,7 @@ import javax.swing.JComponent;
  */
 public class FlightList {
     
-    // Returns a JPanel with the hotel results from hotels
+    // Returns a JPanel with the flight results from flights
     public static javax.swing.JPanel displayFlights(functionality.Flight[] flights, javax.swing.JPanel container) {
         javax.swing.JPanel[] flightPanels = new javax.swing.JPanel[flights.length];
         for (int i=0;i<flights.length;i++) {
