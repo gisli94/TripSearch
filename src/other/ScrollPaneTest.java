@@ -6,6 +6,7 @@
 package other;
 
 import javax.swing.JComponent;
+import java.util.*;
 
 /**
  *
@@ -19,11 +20,40 @@ public class ScrollPaneTest extends javax.swing.JFrame {
     public ScrollPaneTest() {
         initComponents();
         
+        functionality.Hotel[] hotels = new functionality.Hotel[7];
+        
+        hotels[0] = new functionality.Hotel("Hótel Adam", "Reykjavík", "Double room", 24999);
+        hotels[1] = new functionality.Hotel("Hótel Natura", "Reykjavík", "Single room", 14999);
+        hotels[2] = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        hotels[3] = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        hotels[4] = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        hotels[5] = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        hotels[6] = new functionality.Hotel("Reykjavík Lights", "Reykjavík", "Double room", 54999);
+        
+        functionality.Flight[] flights = new functionality.Flight[5];
+        
+        flights[0] = new functionality.Flight("KEF", "LHR", new Date(), 5, "Icelandair", 24999);
+        flights[1] = new functionality.Flight("KEF", "NY", new Date(), 10, "SAS", 54999);
+        flights[2] = new functionality.Flight("KEF", "LA", new Date(), 5, "British Airways", 104999);
+        flights[3] = new functionality.Flight("KEF", "LHR", new Date(), 5, "Icelandair", 24999);
+        flights[4] = new functionality.Flight("KEF", "LHR", new Date(), 5, "Icelandair", 24999);
+        
+        functionality.Trip[] trips = new functionality.Trip[5];
+        
+        trips[0] = new functionality.Trip(0, "Sightseeing", "20/04/2016", "8:00", "7:30", "Golden Circle", 10, 8, 24999);
+        trips[1] = new functionality.Trip(1, "Glacier", "19/04/2016", "8:00", "7:30", "Langjökull", 10, 8, 54999);
+        trips[2] = new functionality.Trip(2, "Snowmobiling", "21/04/2016", "8:00", "8:30", "Vatnajökull", 10, 8, 104999);
+        trips[3] = new functionality.Trip(3, "Northern Lights", "19/04/2016", "20:00", "4:00", "Suðurnes", 10, 8, 24999);
+        trips[4] = new functionality.Trip(4, "Sightseeing", "22/04/2016", "9:00", "7:30", "Suðurland", 10, 8, 24999);
+        
         GUI.Result res = new GUI.Result();
         javax.swing.JPanel[] results = res.getResults();
         
+        GUI.HotelList.displayHotels(hotels, container);
+        //GUI.FlightList.displayFlights(flights, container);
+        //GUI.TripList.displayTrips(trips, container);
         // Display them
-        displayResults(results, container);
+        //displayResults(results, container);
     }
     
         // Add the results to the container

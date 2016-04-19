@@ -11,10 +11,18 @@ package functionality;
  */
 public class TourSearch {
     
-    private Tour[] currentTours;
+    private functionality.daytours.Trip[] currentTours;
     
-    public TourSearch(String type, ) {
+    public TourSearch(Date date, String type, String location, int numSeats) {
         
+    }
+    
+    private searchTours(Date date, String type, String location, int numSeats) {
+        
+    }
+    
+    private functionality.daytours.Trip[] getCurrentTours() {
+        return currentTours;
     }
     
 }
