@@ -32,7 +32,7 @@ public class HotelSearch {
         
         for (int i = 0; i < rooms.length; i++) {
             h[i] = functionality.hotel.Controller.getHotel(rooms[i].getHotelID());
-            if (!h[i].getLocationCity().equals(location)) {
+            if (!h[i].getLocation().equals(location)) {
                 h[i] = null;
             }
         }
