@@ -6,6 +6,7 @@
 package functionality;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -27,17 +28,17 @@ public class HotelSearch {
         int nrOfDates = getNumberOfDates(startTime, finishTime);
         
         functionality.hotel.Room[] rooms = functionality.hotel.Controller.getAvailability(start, finish, nrOfDates);
-        int[] hotelIds = new int[rooms.length];
-        functionality.hotel.Hotel[] hotels = new functionality.hotel.Hotel[rooms.length];
+        functionality.hotel.Hotel[] h = new functionality.hotel.Hotel[rooms.length];
         
         for (int i = 0; i < rooms.length; i++) {
-            rooms[i].getHotelID();
+            h[i] = functionality.hotel.Controller.getHotel(rooms[i].getHotelID());
+            if (!h[i].getLocationCity().equals(location)) {
+                h[i] = null;
+            }
         }
+        h = getRidOfNulls(h);
+        Hotel[] hotels = createHotelArray(h, rooms);
         
-        location = null;
-        startTime = null;
-        finishTime = null;
-        numberOfGuests = 0;
         return null;
     }
     
@@ -92,5 +93,42 @@ public class HotelSearch {
     
     private int getNumberOfDates(Date s, Date f) {
         return Math.abs(s.getDate() - f.getDate());
+    }
+    
+    private functionality.hotel.Hotel[] getRidOfNulls(functionality.hotel.Hotel[] h) {
+        ArrayList<functionality.hotel.Hotel> hotels = new ArrayList<functionality.hotel.Hotel>();
+        for (int i = 0; i < h.length; i++) {
+            if (h[i] != null) {
+                hotels.add(h[i]);
+            }
+        }
+        functionality.hotel.Hotel[] hot = new functionality.hotel.Hotel[hotels.size()];
+        for (int i = 0; i < hotels.size(); i++) {
+            hot[i] = hotels.get(i);
+        }
+        return hot;
+    }
+    
+    private Hotel[] createHotelArray(functionality.hotel.Hotel[] h, functionality.hotel.Room[] r) throws SQLException {
+        int[] hotelIds = new int[r.length];
+        for (int i = 0; i < r.length; i++) {
+            hotelIds[i] = r[i].getHotelID();
+        }
+        
+        String name = "";
+        String location = "";
+        String type = "";
+        int price = 0;
+        
+        ArrayList<Hotel> hotels = new ArrayList<>();
+        
+        for (int i = 0; i < r.length; i++) {
+            hotels.add(new Hotel(functionality.hotel.Controller.getHotel(hotelIds[i]).getName(), functionality.hotel.Controller.getHotel(hotelIds[i]).getLocationCity(), r[i].getType(), r[i].getPrice()));
+        }
+        Hotel[] hot = new Hotel[hotels.size()];
+        for (int i = 0; i < hotels.size(); i++) {
+            hot[i] = hotels.get(i);
+        }
+        return hot;
     }
 }

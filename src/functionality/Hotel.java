@@ -15,13 +15,13 @@ public class Hotel {
     private String location;
     //private short stars;
     //private HotelReview[] reviews;
-    private int numberOfAvailableBeds;
-    private int price;
+    private String type;
+    private double price;
     
-    public Hotel(String n, String loc, int nOAB, int p) {
+    public Hotel(String n, String loc, String t, double p) {
         name = n;
         location = loc;
-        numberOfAvailableBeds = nOAB;
+        type = t;
         price = p;
     }
     

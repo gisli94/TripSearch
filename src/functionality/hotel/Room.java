@@ -17,6 +17,10 @@ public class Room {
 		setPrice(price);
 	}
 
+        public int getHotelID() {
+            return hotelID;
+        }
+        
 	private void setHotelID(int id) {
 		hotelID = id;		
 	}
@@ -64,9 +68,4 @@ public class Room {
 //			availableDates[i] = value;
 //		}
 //	}
-
-	public int getHotelID() {
-		return hotelID;
-	}
-
 }

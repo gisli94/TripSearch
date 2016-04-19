@@ -157,7 +157,7 @@ public class Controller {
 		return newGuy;
 	}
 	
-	public Hotel getHotel(int id) throws SQLException{
+	public static Hotel getHotel(int id) throws SQLException{
 		Connection conn = PostgresqlConnection.getConnection();
 		Statement stmt = conn.createStatement();
 		String sql = "select * from hotels where hotelid ="+id;
