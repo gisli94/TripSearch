@@ -19,6 +19,9 @@ public class ResultList extends javax.swing.JFrame {
     public ResultList() {
         initComponents();
         
+        GUI.Result res = new GUI.Result();
+        javax.swing.JPanel[] results = res.getResults();
+        
         // "Get" the results
         javax.swing.JPanel[] flights = new javax.swing.JPanel[5];
         for (int i=0;i<flights.length;i++) {
@@ -26,7 +29,7 @@ public class ResultList extends javax.swing.JFrame {
         }
         
         // Display them
-        displayResults(flights, container);
+        displayResults(results, container);
     }
     
     // Add the results to the container
