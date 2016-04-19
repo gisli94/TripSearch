@@ -16,13 +16,29 @@ public class Hotel {
     //private short stars;
     //private HotelReview[] reviews;
     private String type;
-    private double price;
+    private int price;
     
-    public Hotel(String n, String loc, String t, double p) {
+    public Hotel(String n, String loc, String t, int p) {
         name = n;
         location = loc;
         type = t;
         price = p;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public String getLocation() {
+        return location;
+    }
+    
+    public String getType() {
+        return type;
+    }
+    
+    public int getPrice() {
+        return price;
     }
     
 }
