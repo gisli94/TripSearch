@@ -53,8 +53,7 @@ public class TripList {
         javax.swing.JLabel date = new javax.swing.JLabel();
         javax.swing.JLabel location = new javax.swing.JLabel();
         javax.swing.JLabel price = new javax.swing.JLabel();
-
-        Trip.setBackground(new java.awt.Color(153, 153, 255));
+        Trip.setBackground(new java.awt.Color(188, 188, 242));
         Trip.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TripMouseClicked(evt, Trip, t);

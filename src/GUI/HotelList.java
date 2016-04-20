@@ -52,7 +52,7 @@ public class HotelList {
         javax.swing.JLabel Location = new javax.swing.JLabel();
         javax.swing.JLabel Price = new javax.swing.JLabel();
 
-        Hotel.setBackground(new java.awt.Color(153, 153, 255));
+        Hotel.setBackground(new java.awt.Color(255, 204, 51));
         Hotel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HotelMouseClicked(evt, Hotel, h);
