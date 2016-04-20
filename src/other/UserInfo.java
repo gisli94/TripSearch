@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package other;
+import java.util.*;
 
 /**
  *
@@ -14,26 +15,44 @@ public class UserInfo {
     private String name;
     private String address;
     private String phoneNumber;
+    private String fax;
+    private String email;
+    private Date dateOfBirth;
 
-    public UserInfo(String n, String a, String p) {
-	name = n;
-	address = a;
-	phoneNumber = p;
+    public UserInfo(String n, String a, String p, String f, String e, Date D) {
+	this.name = n;
+	this.address = a;
+	this.phoneNumber = p;
+        this.fax = f;
+        this.email = e;
+        this.dateOfBirth = D;
     }
 
     public String getName() {
-	return name;
+	return this.name;
     }
-
+    
+    public String getEmail() {
+	return this.email;
+    }
+    
+    public Date getDate() {
+	return this.dateOfBirth;
+    }
+    
+    public String getFax() {
+	return this.fax;
+    }
+    
     public String getAddress() {
-	return address;
+	return this.address;
     }
 
     public String getPhoneNumber() {
-	return phoneNumber;
+	return this.phoneNumber;
     }
 
     public String toString() {
-	return ("" + name + ", " + address + ", " + phoneNumber);  
+	return ("" + this.name + ", " + this.address + ", " + this.phoneNumber + ", " + this.fax + ", " + this.email + ", " + this.dateOfBirth);  
     }
 }
