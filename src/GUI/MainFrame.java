@@ -161,7 +161,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         LabelDate.setText("Date :");
 
-        LocationBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Reykjavík", "Southern Iceland", "Easthern Iceland", "Westhern Iceland", "Northern Iceland" }));
+        LocationBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Reykjavík", "Akureyri" }));
         LocationBox3.setToolTipText("");
 
         FromDay3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "day", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
@@ -180,7 +180,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         LabelTo3.setText("to:");
 
-        LocationBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Reykjavík", "Southern Iceland", "Easthern Iceland", "Westhern Iceland", "Northern Iceland" }));
+        LocationBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Reykjavík", "Akureyri" }));
         LocationBox4.setToolTipText("");
 
         LocationBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "adult-tickets", "1", "2", "3", "4", "5", "6", "7", "8" }));
@@ -324,7 +324,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(SearchOptions3Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(ReturnPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         SearchButton3.setText("Search");
@@ -340,7 +340,7 @@ public class MainFrame extends javax.swing.JFrame {
             SearchBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SearchBox3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(SearchOptions3, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE)
+                .addComponent(SearchOptions3, javax.swing.GroupLayout.PREFERRED_SIZE, 1046, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SearchButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -352,7 +352,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(SearchBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(SearchButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(SearchOptions3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         SearchOptions3.getAccessibleContext().setAccessibleName("Customer Info");
@@ -422,7 +422,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(TourPannel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(SearchBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 1291, Short.MAX_VALUE)
+                    .addComponent(SearchBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 1318, Short.MAX_VALUE)
                     .addGroup(TourPannel3Layout.createSequentialGroup()
                         .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TourResaults3)
@@ -562,7 +562,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(LocationBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13)
                     .addComponent(LocationBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         SearchButton2.setText("Search");
@@ -578,7 +578,7 @@ public class MainFrame extends javax.swing.JFrame {
             SearchBox2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SearchBox2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(SearchOptions2, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
+                .addComponent(SearchOptions2, javax.swing.GroupLayout.DEFAULT_SIZE, 1027, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SearchButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -778,7 +778,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(SearchOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(LocationBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         SearchButton.setText("Search");
@@ -794,7 +794,7 @@ public class MainFrame extends javax.swing.JFrame {
             SearchBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SearchBoxLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(SearchOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 1002, Short.MAX_VALUE)
+                .addComponent(SearchOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1121,7 +1121,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(Instructions)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(UI, javax.swing.GroupLayout.PREFERRED_SIZE, 1078, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1132,7 +1132,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1181, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1184,7 +1184,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void SearchButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButton3ActionPerformed
         // TODO add your handling code here:
         int temp = 2015 + FromYear3.getSelectedIndex();
-        Date D = new Date(temp, FromMonth3.getSelectedIndex(), FromDay3.getSelectedIndex());
+        Date D = new Date(temp, FromMonth3.getSelectedIndex()+1, FromDay3.getSelectedIndex());
         
         functionality.flight.Flight[] flights = c.searchFlights((String)LocationBox3.getSelectedItem(), (String)LocationBox4.getSelectedItem(),
                                                                     LocationBox6.getSelectedIndex() , LocationBox6.getSelectedIndex(), D, null, VariFliCB.isSelected());
