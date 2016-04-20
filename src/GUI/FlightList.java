@@ -18,6 +18,7 @@ public class FlightList {
     
     // Returns a JPanel with the flight results from flights
     public static javax.swing.JPanel displayFlights(functionality.flight.Flight[] flights, javax.swing.JPanel container) {
+        selectedFlight = null;
         selectedFlightFrame = null;
         
         javax.swing.JPanel[] flightPanels = new javax.swing.JPanel[flights.length];
@@ -120,5 +121,9 @@ public class FlightList {
         }
         selectedFlightFrame = frame;
         selectedFlight = flight;
-    }   
+    }
+    
+    public functionality.flight.Flight getSelectedFlight() {
+        return selectedFlight;
+    }
 }

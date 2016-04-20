@@ -17,6 +17,7 @@ public class HotelList {
     
     // Returns a JPanel with the hotel results from hotels
     public static javax.swing.JPanel displayHotels(functionality.hotel.Hotel[] hotels, javax.swing.JPanel container) {
+        selectedHotel = null;
         selectedHotelFrame = null;
         
         javax.swing.JPanel[] hotelPanels = new javax.swing.JPanel[hotels.length];
@@ -111,5 +112,9 @@ public class HotelList {
         }
         selectedHotelFrame = frame;
         selectedHotel = hotel;
-    }  
+    }
+    
+    public functionality.hotel.Hotel getSelectedHotel() {
+        return selectedHotel;
+    }
 }
