@@ -64,6 +64,8 @@ public class MainFrame extends javax.swing.JFrame {
         TourResaults4 = new javax.swing.JScrollPane();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        Auglysing1 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         Hotels = new javax.swing.JScrollPane();
         TourPannel2 = new javax.swing.JPanel();
         SearchBox2 = new javax.swing.JPanel();
@@ -78,6 +80,8 @@ public class MainFrame extends javax.swing.JFrame {
         ToDay2 = new javax.swing.JComboBox();
         ToMonth2 = new javax.swing.JComboBox();
         ToYear2 = new javax.swing.JComboBox();
+        LocationBox1 = new javax.swing.JComboBox();
+        jLabel13 = new javax.swing.JLabel();
         SearchButton2 = new javax.swing.JButton();
         TourResaults2 = new javax.swing.JScrollPane();
         ResaultPanel2 = new javax.swing.JPanel();
@@ -107,6 +111,7 @@ public class MainFrame extends javax.swing.JFrame {
         ResaultPanel = new javax.swing.JPanel();
         Auglysing3 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         user = new javax.swing.JScrollPane();
         TourPannel4 = new javax.swing.JPanel();
         SearchBox4 = new javax.swing.JPanel();
@@ -335,7 +340,7 @@ public class MainFrame extends javax.swing.JFrame {
             SearchBox3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SearchBox3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(SearchOptions3, javax.swing.GroupLayout.DEFAULT_SIZE, 994, Short.MAX_VALUE)
+                .addComponent(SearchOptions3, javax.swing.GroupLayout.DEFAULT_SIZE, 1006, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SearchButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -357,7 +362,7 @@ public class MainFrame extends javax.swing.JFrame {
         FlightResaultsP1.setLayout(FlightResaultsP1Layout);
         FlightResaultsP1Layout.setHorizontalGroup(
             FlightResaultsP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1006, Short.MAX_VALUE)
+            .addGap(0, 1018, Short.MAX_VALUE)
         );
         FlightResaultsP1Layout.setVerticalGroup(
             FlightResaultsP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -381,14 +386,34 @@ public class MainFrame extends javax.swing.JFrame {
         AuglysingLayout.setVerticalGroup(
             AuglysingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AuglysingLayout.createSequentialGroup()
-                .addGap(294, 294, 294)
+                .addGap(135, 135, 135)
                 .addComponent(jLabel5)
-                .addContainerGap(472, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel6.setText("Flights:");
 
         jLabel9.setText("Return Flights:");
+
+        Auglysing1.setBackground(new java.awt.Color(0, 255, 204));
+
+        jLabel11.setText("Hotels you might be intrested in as well");
+
+        javax.swing.GroupLayout Auglysing1Layout = new javax.swing.GroupLayout(Auglysing1);
+        Auglysing1.setLayout(Auglysing1Layout);
+        Auglysing1Layout.setHorizontalGroup(
+            Auglysing1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Auglysing1Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jLabel11))
+        );
+        Auglysing1Layout.setVerticalGroup(
+            Auglysing1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Auglysing1Layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(jLabel11)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout TourPannel3Layout = new javax.swing.GroupLayout(TourPannel3);
         TourPannel3.setLayout(TourPannel3Layout);
@@ -397,7 +422,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(TourPannel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(SearchBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 1279, Short.MAX_VALUE)
+                    .addComponent(SearchBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 1291, Short.MAX_VALUE)
                     .addGroup(TourPannel3Layout.createSequentialGroup()
                         .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TourResaults3)
@@ -408,7 +433,9 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addComponent(jLabel9))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Auglysing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Auglysing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Auglysing1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         TourPannel3Layout.setVerticalGroup(
@@ -419,14 +446,15 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TourPannel3Layout.createSequentialGroup()
-                        .addComponent(TourResaults3, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(TourResaults4, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Auglysing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Auglysing, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TourResaults3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Auglysing1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TourResaults4, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -475,6 +503,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         ToYear2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Year", "2016", "2017", "2018" }));
 
+        LocationBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Any", "Reykjavík", "Southern Iceland", "Easthern Iceland", "Westhern Iceland", "Northern Iceland" }));
+        LocationBox1.setToolTipText("");
+
+        jLabel13.setText("Location :");
+
         javax.swing.GroupLayout SearchOptions2Layout = new javax.swing.GroupLayout(SearchOptions2);
         SearchOptions2.setLayout(SearchOptions2Layout);
         SearchOptions2Layout.setHorizontalGroup(
@@ -492,16 +525,22 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(SearchOptions2Layout.createSequentialGroup()
                         .addComponent(FromMonth2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(FromYear2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(137, 137, 137)
+                        .addComponent(FromYear2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LocationBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(116, 116, 116)
+                .addGroup(SearchOptions2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SearchOptions2Layout.createSequentialGroup()
                         .addComponent(LabelTo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ToDay2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(26, 26, 26)
+                        .addComponent(ToDay2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SearchOptions2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SearchOptions2Layout.createSequentialGroup()
                         .addComponent(ToMonth2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ToYear2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(LocationBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LocationBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SearchOptions2Layout.setVerticalGroup(
@@ -520,7 +559,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(SearchOptions2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NoB)
-                    .addComponent(LocationBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LocationBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13)
+                    .addComponent(LocationBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
@@ -753,7 +794,7 @@ public class MainFrame extends javax.swing.JFrame {
             SearchBoxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SearchBoxLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(SearchOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
+                .addComponent(SearchOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 1002, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -772,11 +813,11 @@ public class MainFrame extends javax.swing.JFrame {
         ResaultPanel.setLayout(ResaultPanelLayout);
         ResaultPanelLayout.setHorizontalGroup(
             ResaultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 990, Short.MAX_VALUE)
+            .addGap(0, 1441, Short.MAX_VALUE)
         );
         ResaultPanelLayout.setVerticalGroup(
             ResaultPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 856, Short.MAX_VALUE)
+            .addGap(0, 1003, Short.MAX_VALUE)
         );
 
         TourResaults.setViewportView(ResaultPanel);
@@ -802,6 +843,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(188, Short.MAX_VALUE))
         );
 
+        jLabel12.setText("Search resaults:");
+
         javax.swing.GroupLayout TourPannelLayout = new javax.swing.GroupLayout(TourPannel);
         TourPannel.setLayout(TourPannelLayout);
         TourPannelLayout.setHorizontalGroup(
@@ -811,7 +854,11 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(TourPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SearchBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(TourPannelLayout.createSequentialGroup()
-                        .addComponent(TourResaults)
+                        .addGroup(TourPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TourResaults, javax.swing.GroupLayout.DEFAULT_SIZE, 1014, Short.MAX_VALUE)
+                            .addGroup(TourPannelLayout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Auglysing3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -821,11 +868,14 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(TourPannelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(SearchBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(TourPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(TourResaults, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Auglysing3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 352, Short.MAX_VALUE))
+                .addGap(8, 8, 8)
+                .addGroup(TourPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(Auglysing3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(TourPannelLayout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TourResaults, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 336, Short.MAX_VALUE))
         );
 
         Tours.setViewportView(TourPannel);
@@ -1058,8 +1108,7 @@ public class MainFrame extends javax.swing.JFrame {
                             .addGroup(MainPanelLayout.createSequentialGroup()
                                 .addGap(419, 419, 419)
                                 .addComponent(Welcome)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         MainPanelLayout.setVerticalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1070,18 +1119,16 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(AdBanner)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Instructions)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(UI, javax.swing.GroupLayout.PREFERRED_SIZE, 1078, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1113,6 +1160,21 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void SearchButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButton2ActionPerformed
         // TODO add your handling code here:
+        int temp1 = 2015 + FromYear2.getSelectedIndex();
+        int temp2 = 2015 + ToYear2.getSelectedIndex();
+        Date D1 = new Date(temp1, FromMonth2.getSelectedIndex()+1, FromDay2.getSelectedIndex());
+        Date D2 = new Date(temp2, ToMonth2.getSelectedIndex()+1, ToDay2.getSelectedIndex());
+        functionality.hotel.Hotel[] hotels;
+        try {
+            hotels = c.searchHotels((String)LocationBox1.getSelectedItem(), D1, D2, (int)LocationBox2.getSelectedItem());
+            GUI.HotelList.displayHotels(hotels, ResaultPanel2);
+            System.out.println("yeee");
+        }
+        catch (Exception e){}
+        System.out.println("oww");
+        //GUI.FlightList.displayFlights(hotels, FlightResaultsP1);
+        
+        
     }//GEN-LAST:event_SearchButton2ActionPerformed
 
     private void FromDay3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FromDay3ActionPerformed
@@ -1123,9 +1185,6 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         int temp = 2015 + FromYear3.getSelectedIndex();
         Date D = new Date(temp, FromMonth3.getSelectedIndex(), FromDay3.getSelectedIndex());
-        
-        System.out.println((String)LocationBox3.getSelectedItem() + " " + (String)LocationBox4.getSelectedItem()+ " " +
-                                                                    LocationBox6.getSelectedIndex() + " " + LocationBox6.getSelectedIndex()+ " " + D+ " " + null+ " " + VariFliCB.isSelected());
         
         functionality.flight.Flight[] flights = c.searchFlights((String)LocationBox3.getSelectedItem(), (String)LocationBox4.getSelectedItem(),
                                                                     LocationBox6.getSelectedIndex() , LocationBox6.getSelectedIndex(), D, null, VariFliCB.isSelected());
@@ -1202,6 +1261,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AdBanner;
     private javax.swing.JPanel Auglysing;
+    private javax.swing.JPanel Auglysing1;
     private javax.swing.JPanel Auglysing2;
     private javax.swing.JPanel Auglysing3;
     private javax.swing.JTextField BoxAdress;
@@ -1247,6 +1307,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTo5;
     private javax.swing.JLabel LabelWindow1;
     private javax.swing.JComboBox LocationBox;
+    private javax.swing.JComboBox LocationBox1;
     private javax.swing.JComboBox LocationBox2;
     private javax.swing.JComboBox LocationBox3;
     private javax.swing.JComboBox LocationBox4;
@@ -1292,6 +1353,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel Welcome;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
