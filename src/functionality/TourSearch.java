@@ -43,7 +43,7 @@ public class TourSearch {
         return trips;
     }
     
-    private functionality.daytours.Trip[] getCurrentTours() {
+    public functionality.daytours.Trip[] getCurrentTours() {
         return currentTours;
     }
     

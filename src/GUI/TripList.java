@@ -18,6 +18,7 @@ public class TripList {
     
     // Returns a JPanel with the trip results from trips
     public static javax.swing.JPanel displayTrips(functionality.daytours.Trip[] trips, javax.swing.JPanel container) {
+        selectedTrip = null;
         selectedTripFrame = null;
         
         javax.swing.JPanel[] tripPanels = new javax.swing.JPanel[trips.length];
@@ -121,5 +122,9 @@ public class TripList {
         selectedTripFrame = frame;
         selectedTrip = trip;
     }   
+    
+    public functionality.daytours.Trip getSelectedTrip() {
+        return selectedTrip;
+    }
 }
 
