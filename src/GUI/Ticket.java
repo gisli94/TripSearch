@@ -18,11 +18,11 @@ public class Ticket {
         javax.swing.JLabel Hotel = new javax.swing.JLabel();
         javax.swing.JLabel Tour = new javax.swing.JLabel();
 
-        Instruction.setText("Dear" + user.getName() + ", you are about the book the following items: ");
+        Instruction.setText("Dear " + user.getName() + ", you are about the book the following items: ");
 
-        FlightOut.setText(flightOut.getDeparture() + " to" + flightOut.getArrival() + " - " + flightOut.getDateAndTime() + " - " + flightOut.getCompany() + " - " + flightOut.getStartPrice());
+        FlightOut.setText(flightOut.getDeparture() + " to " + flightOut.getArrival() + " - " + flightOut.getDateAndTime() + " - " + flightOut.getCompany() + " - " + flightOut.getStartPrice() + " ISK");
         
-        FlightHome.setText(flightHome.getDeparture() + " to" + flightHome.getArrival() + " - " + flightHome.getDateAndTime() + " - " + flightHome.getCompany() + " - " + flightHome.getStartPrice());
+        FlightHome.setText(flightHome.getDeparture() + " to " + flightHome.getArrival() + " - " + flightHome.getDateAndTime() + " - " + flightHome.getCompany() + " - " + flightHome.getStartPrice() + " ISK");
 
         Hotel.setText(hotel.getName() + " - " + hotel.getLocation());
         
