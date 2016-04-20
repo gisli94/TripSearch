@@ -253,9 +253,9 @@
                                               <Component id="FromYear3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="LabelTo3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="LabelCTicket" min="-2" max="-2" attributes="0"/>
@@ -270,15 +270,14 @@
                                                   <Component id="LocationBox7" min="-2" pref="161" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="LabelWindow" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="LocationBox5" min="-2" pref="161" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="VariFliCB" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="ReturnPanel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -288,24 +287,14 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="LabelDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="FromDay3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="FromMonth3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="FromYear3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="LabelWindow" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="LocationBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  </Group>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="LabelDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FromDay3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FromMonth3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FromYear3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="VariFliCB" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="LabelFrom3" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="LabelTo3" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -335,11 +324,6 @@
                             <Component class="javax.swing.JLabel" name="LabelDate">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Date :"/>
-                              </Properties>
-                            </Component>
-                            <Component class="javax.swing.JLabel" name="LabelWindow">
-                              <Properties>
-                                <Property name="text" type="java.lang.String" value="Search window:"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="LocationBox3">
@@ -460,24 +444,6 @@
                                 </Property>
                                 <Property name="toolTipText" type="java.lang.String" value=""/>
                               </Properties>
-                            </Component>
-                            <Component class="javax.swing.JComboBox" name="LocationBox5">
-                              <Properties>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="6">
-                                    <StringItem index="0" value="+/- 0 Days"/>
-                                    <StringItem index="1" value="+/- 1 Days"/>
-                                    <StringItem index="2" value="+/- 2 Days"/>
-                                    <StringItem index="3" value="+/- 3 Days"/>
-                                    <StringItem index="4" value="+/- 4 days"/>
-                                    <StringItem index="5" value="+/- 5 days"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="toolTipText" type="java.lang.String" value=""/>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LocationBox5ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="LocationBox6">
                               <Properties>
@@ -663,6 +629,14 @@
                                 </Component>
                               </SubComponents>
                             </Container>
+                            <Component class="javax.swing.JCheckBox" name="VariFliCB">
+                              <Properties>
+                                <Property name="text" type="java.lang.String" value="Allow variable flights (+/- 5 days)"/>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VariFliCBActionPerformed"/>
+                              </Events>
+                            </Component>
                           </SubComponents>
                         </Container>
                         <Component class="javax.swing.JButton" name="SearchButton3">
@@ -678,6 +652,23 @@
                     <Container class="javax.swing.JScrollPane" name="TourResaults3">
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Container class="javax.swing.JPanel" name="FlightResaultsP1">
+
+                          <Layout>
+                            <DimensionLayout dim="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <EmptySpace min="0" pref="1006" max="32767" attributes="0"/>
+                              </Group>
+                            </DimensionLayout>
+                            <DimensionLayout dim="1">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <EmptySpace min="0" pref="372" max="32767" attributes="0"/>
+                              </Group>
+                            </DimensionLayout>
+                          </Layout>
+                        </Container>
+                      </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="Auglysing">
                       <Properties>
