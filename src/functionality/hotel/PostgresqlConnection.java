@@ -5,11 +5,8 @@ public class PostgresqlConnection {
 
 	public static Connection getConnection(){
 		try {
-			Class.forName("org.postgresql.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/HotelSearch", 
-					"postgres", "gusti123");
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/skulii/Downloads/TripSelector.db");
 //			if(conn!=null) System.out.println("Connected to DB");
-			
 			return conn;
 		}
 		catch(Exception e){

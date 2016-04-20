@@ -114,7 +114,7 @@ public class HotelList {
         selectedHotel = hotel;
     }
     
-    public functionality.hotel.Hotel getSelectedHotel() {
+    public static functionality.hotel.Hotel getSelectedHotel() {
         return selectedHotel;
     }
 }

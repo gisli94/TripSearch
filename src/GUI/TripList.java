@@ -123,7 +123,7 @@ public class TripList {
         selectedTrip = trip;
     }   
     
-    public functionality.daytours.Trip getSelectedTrip() {
+    public static functionality.daytours.Trip getSelectedTrip() {
         return selectedTrip;
     }
 }

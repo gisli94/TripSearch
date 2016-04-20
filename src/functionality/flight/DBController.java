@@ -31,6 +31,7 @@ public class DBController {
             c.commit();
             c.close();
             didComplete = true;
+            System.out.println("bla");
 
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());

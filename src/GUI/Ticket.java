@@ -19,14 +19,24 @@ public class Ticket {
         javax.swing.JLabel Tour = new javax.swing.JLabel();
 
         Instruction.setText("Dear " + user.getName() + ", you are about to book the following items: ");
-
-        FlightOut.setText(flightOut.getDeparture() + " to " + flightOut.getArrival() + " - " + flightOut.getDateAndTime() + " - " + flightOut.getCompany() + " - " + flightOut.getStartPrice() + " ISK");
         
-        FlightHome.setText(flightHome.getDeparture() + " to " + flightHome.getArrival() + " - " + flightHome.getDateAndTime() + " - " + flightHome.getCompany() + " - " + flightHome.getStartPrice() + " ISK");
-
-        Hotel.setText(hotel.getName() + " - " + hotel.getLocation());
+        if (flightOut != null) {
+           FlightOut.setText(flightOut.getDeparture() + " to " + flightOut.getArrival() + " - " + flightOut.getDateAndTime() + " - " + flightOut.getCompany() + " - " + flightOut.getStartPrice() + " ISK");
+         
+        }
         
-        Tour.setText(tour.getType() + " - " + tour.getDate() + " - " + tour.getLocation());
+        if (flightHome != null) {
+            FlightHome.setText(flightHome.getDeparture() + " to " + flightHome.getArrival() + " - " + flightHome.getDateAndTime() + " - " + flightHome.getCompany() + " - " + flightHome.getStartPrice() + " ISK");
+
+        }
+        
+        if (hotel != null) {
+           Hotel.setText(hotel.getName() + " - " + hotel.getLocation()); 
+        }
+        
+        if (tour != null) {
+            Tour.setText(tour.getType() + " - " + tour.getDate() + " - " + tour.getLocation());
+        }
 
         javax.swing.GroupLayout TicketLayout = new javax.swing.GroupLayout(Ticket);
         Ticket.setLayout(TicketLayout);
@@ -49,10 +59,10 @@ public class Ticket {
                 .addComponent(Instruction)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(FlightOut)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FlightHome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Tour)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FlightHome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Hotel)
                 .addContainerGap(9, Short.MAX_VALUE))

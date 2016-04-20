@@ -13,17 +13,21 @@ import javax.swing.JComponent;
  */
 public class FlightList {
     
-    private static functionality.flight.Flight selectedFlight;
-    private static javax.swing.JPanel selectedFlightFrame;
+    private static functionality.flight.Flight selectedFlightOut;
+    private static functionality.flight.Flight selectedFlightHome;
+    private static javax.swing.JPanel selectedFlightOutFrame;
+    private static javax.swing.JPanel selectedFlightHomeFrame;
     
     // Returns a JPanel with the flight results from flights
-    public static javax.swing.JPanel displayFlights(functionality.flight.Flight[] flights, javax.swing.JPanel container) {
-        selectedFlight = null;
-        selectedFlightFrame = null;
+    public static javax.swing.JPanel displayFlights(functionality.flight.Flight[] flights, javax.swing.JPanel container, boolean homeFlight) {
+        selectedFlightOut = null;
+        selectedFlightHome = null;
+        selectedFlightOutFrame = null;
+        selectedFlightHomeFrame = null;
         
         javax.swing.JPanel[] flightPanels = new javax.swing.JPanel[flights.length];
         for (int i=0;i<flights.length;i++) {
-            flightPanels[i] = createTicket(flights[i]);
+            flightPanels[i] = createTicket(flights[i], homeFlight);
         }
         
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(container);
@@ -46,7 +50,7 @@ public class FlightList {
     }
     
     // Creates a ticket with information about hotel h
-    private static javax.swing.JPanel createTicket(functionality.flight.Flight f) {
+    private static javax.swing.JPanel createTicket(functionality.flight.Flight f, boolean homeFlight) {
         javax.swing.JPanel Flight = new javax.swing.JPanel();
         javax.swing.JLabel departureLocation = new javax.swing.JLabel();
         javax.swing.JLabel arrivalLocation = new javax.swing.JLabel();
@@ -57,7 +61,7 @@ public class FlightList {
         Flight.setBackground(new java.awt.Color(153, 153, 255));
         Flight.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                FlightMouseClicked(evt, Flight, f);
+                FlightMouseClicked(evt, Flight, f, homeFlight);
             }
         });
 
@@ -114,16 +118,29 @@ public class FlightList {
         return Flight;
     }
     
-    private static void FlightMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.flight.Flight flight) {                                    
+    private static void FlightMouseClicked(java.awt.event.MouseEvent evt, javax.swing.JPanel frame, functionality.flight.Flight flight, boolean homeFlight) {                                    
         frame.setBackground(new java.awt.Color(0, 255, 0));
-        if (selectedFlightFrame != null) {
-            selectedFlightFrame.setBackground(new java.awt.Color(153, 153, 255));
+        if (!homeFlight) {
+           selectedFlightOut = flight;
+           if (selectedFlightOutFrame != null) {
+                selectedFlightOutFrame.setBackground(new java.awt.Color(153, 153, 255));
+            }
+           selectedFlightOutFrame = frame;
         }
-        selectedFlightFrame = frame;
-        selectedFlight = flight;
+        else {
+            selectedFlightHome = flight;
+            if (selectedFlightHomeFrame != null) {
+                selectedFlightHomeFrame.setBackground(new java.awt.Color(153, 153, 255));
+            }
+            selectedFlightHomeFrame = frame;
+        }
     }
     
-    public functionality.flight.Flight getSelectedFlight() {
-        return selectedFlight;
+    public static functionality.flight.Flight getSelectedFlightOut() {
+        return selectedFlightOut;
+    }
+    
+    public static functionality.flight.Flight getSelectedFlightHome() {
+        return selectedFlightHome;
     }
 }

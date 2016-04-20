@@ -62,6 +62,7 @@ public class MainFrame extends javax.swing.JFrame {
         Auglysing = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         TourResaults4 = new javax.swing.JScrollPane();
+        FlightResaultsP2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         Auglysing1 = new javax.swing.JPanel();
@@ -135,7 +136,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         Ticket = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
+        TicketPanel = new javax.swing.JPanel();
         Welcome = new javax.swing.JLabel();
         AdBanner = new javax.swing.JLabel();
         Instructions = new javax.swing.JLabel();
@@ -391,6 +392,19 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        javax.swing.GroupLayout FlightResaultsP2Layout = new javax.swing.GroupLayout(FlightResaultsP2);
+        FlightResaultsP2.setLayout(FlightResaultsP2Layout);
+        FlightResaultsP2Layout.setHorizontalGroup(
+            FlightResaultsP2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1018, Short.MAX_VALUE)
+        );
+        FlightResaultsP2Layout.setVerticalGroup(
+            FlightResaultsP2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 374, Short.MAX_VALUE)
+        );
+
+        TourResaults4.setViewportView(FlightResaultsP2);
+
         jLabel6.setText("Flights:");
 
         jLabel9.setText("Return Flights:");
@@ -454,8 +468,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(TourPannel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Auglysing1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(TourResaults4, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE))
-                .addContainerGap(24, Short.MAX_VALUE))
+                    .addComponent(TourResaults4))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         Flights.setViewportView(TourPannel3);
@@ -578,7 +592,7 @@ public class MainFrame extends javax.swing.JFrame {
             SearchBox2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SearchBox2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(SearchOptions2, javax.swing.GroupLayout.DEFAULT_SIZE, 1027, Short.MAX_VALUE)
+                .addComponent(SearchOptions2, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SearchButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -597,7 +611,7 @@ public class MainFrame extends javax.swing.JFrame {
         ResaultPanel2.setLayout(ResaultPanel2Layout);
         ResaultPanel2Layout.setHorizontalGroup(
             ResaultPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1002, Short.MAX_VALUE)
+            .addGap(0, 1008, Short.MAX_VALUE)
         );
         ResaultPanel2Layout.setVerticalGroup(
             ResaultPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -657,7 +671,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(TourPannel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TourResaults2, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Auglysing2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 349, Short.MAX_VALUE))
+                .addGap(0, 371, Short.MAX_VALUE))
         );
 
         Hotels.setViewportView(TourPannel2);
@@ -875,7 +889,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(TourResaults, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 336, Short.MAX_VALUE))
+                .addGap(0, 373, Short.MAX_VALUE))
         );
 
         Tours.setViewportView(TourPannel);
@@ -1070,20 +1084,20 @@ public class MainFrame extends javax.swing.JFrame {
 
         UI.addTab("Customer info", user);
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 0));
+        TicketPanel.setBackground(new java.awt.Color(255, 102, 0));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1303, Short.MAX_VALUE)
+        javax.swing.GroupLayout TicketPanelLayout = new javax.swing.GroupLayout(TicketPanel);
+        TicketPanel.setLayout(TicketPanelLayout);
+        TicketPanelLayout.setHorizontalGroup(
+            TicketPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1330, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        TicketPanelLayout.setVerticalGroup(
+            TicketPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1062, Short.MAX_VALUE)
         );
 
-        Ticket.setViewportView(jPanel1);
+        Ticket.setViewportView(TicketPanel);
 
         UI.addTab("Ticket", Ticket);
 
@@ -1147,7 +1161,15 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_ToDayActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-        // TODO add your handling code here:
+        functionality.daytours.Trip[] trips = new functionality.daytours.Trip[5];
+        
+        trips[0] = new functionality.daytours.Trip(0, "Sightseeing", "20/04/2016", "8:00", "7:30", "Golden Circle", 10, 8, 24999);
+        trips[1] = new functionality.daytours.Trip(1, "Glacier", "19/04/2016", "8:00", "7:30", "Langjökull", 10, 8, 54999);
+        trips[2] = new functionality.daytours.Trip(2, "Snowmobiling", "21/04/2016", "8:00", "8:30", "Vatnajökull", 10, 8, 104999);
+        trips[3] = new functionality.daytours.Trip(3, "Northern Lights", "19/04/2016", "20:00", "4:00", "Suðurnes", 10, 8, 24999);
+        trips[4] = new functionality.daytours.Trip(4, "Sightseeing", "22/04/2016", "9:00", "7:30", "Suðurland", 10, 8, 24999);
+        
+        GUI.TripList.displayTrips(trips, ResaultPanel);
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void FromDay2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FromDay2ActionPerformed
@@ -1164,17 +1186,19 @@ public class MainFrame extends javax.swing.JFrame {
         int temp2 = 2015 + ToYear2.getSelectedIndex();
         Date D1 = new Date(temp1, FromMonth2.getSelectedIndex()+1, FromDay2.getSelectedIndex());
         Date D2 = new Date(temp2, ToMonth2.getSelectedIndex()+1, ToDay2.getSelectedIndex());
-        functionality.hotel.Hotel[] hotels;
-        try {
+        functionality.hotel.Hotel[] hotels = new functionality.hotel.Hotel[4];
+        hotels[0] = new functionality.hotel.Hotel("Hótel Adam", "Reykjavík", "Double Room", 24999);
+        hotels[1] = new functionality.hotel.Hotel("Hótel Adam", "Reykjavík", "Double Room", 24999);
+        hotels[2] = new functionality.hotel.Hotel("Hótel Adam", "Reykjavík", "Double Room", 24999);
+        hotels[3] = new functionality.hotel.Hotel("Hótel Adam", "Reykjavík", "Double Room", 24999);
+        /*try {
             hotels = c.searchHotels((String)LocationBox1.getSelectedItem(), D1, D2, (int)LocationBox2.getSelectedItem());
             GUI.HotelList.displayHotels(hotels, ResaultPanel2);
             System.out.println("yeee");
         }
         catch (Exception e){}
-        System.out.println("oww");
-        //GUI.FlightList.displayFlights(hotels, FlightResaultsP1);
-        
-        
+        System.out.println("oww");*/
+        GUI.HotelList.displayHotels(hotels, ResaultPanel2);  
     }//GEN-LAST:event_SearchButton2ActionPerformed
 
     private void FromDay3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FromDay3ActionPerformed
@@ -1186,9 +1210,18 @@ public class MainFrame extends javax.swing.JFrame {
         int temp = 2015 + FromYear3.getSelectedIndex();
         Date D = new Date(temp, FromMonth3.getSelectedIndex()+1, FromDay3.getSelectedIndex());
         
-        functionality.flight.Flight[] flights = c.searchFlights((String)LocationBox3.getSelectedItem(), (String)LocationBox4.getSelectedItem(),
-                                                                    LocationBox6.getSelectedIndex() , LocationBox6.getSelectedIndex(), D, null, VariFliCB.isSelected());
-        GUI.FlightList.displayFlights(flights, FlightResaultsP1);
+        //functionality.flight.Flight[] flights = c.searchFlights((String)LocationBox3.getSelectedItem(), (String)LocationBox4.getSelectedItem(), LocationBox6.getSelectedIndex() , LocationBox6.getSelectedIndex(), D, null, VariFliCB.isSelected());
+        functionality.flight.Flight[] flights = new functionality.flight.Flight[4];
+        flights[0]  = new functionality.flight.Flight("Icelandair", 5, 200, "LHR", "KEF", 25999, 20, new Date());
+        flights[1] = new functionality.flight.Flight("Icelandair", 5, 200, "KEF", "LHR", 25999, 20, new Date());
+     flights[2] = new functionality.flight.Flight("Icelandair", 5, 200, "KEF", "LHR", 25999, 20, new Date());
+     flights[3] = new functionality.flight.Flight("Icelandair", 5, 200, "KEF", "LHR", 25999, 20, new Date());
+        
+         GUI.FlightList.displayFlights(flights, FlightResaultsP1, false);
+         // Display the return flights
+        if (ReturnCB.isSelected()) {
+             GUI.FlightList.displayFlights(flights, FlightResaultsP2, true);
+        }
     }//GEN-LAST:event_SearchButton3ActionPerformed
 
     private void FromDay4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FromDay4ActionPerformed
@@ -1196,7 +1229,29 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_FromDay4ActionPerformed
 
     private void SearchButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButton4ActionPerformed
-        // TODO add your handling code here:
+        // User info handled
+        functionality.flight.Flight flightOut = null;
+        functionality.flight.Flight flightHome = null;
+        functionality.hotel.Hotel hotel = null;
+        functionality.daytours.Trip tour = null;
+        if (GUI.FlightList.getSelectedFlightOut() != null) {
+            flightOut = GUI.FlightList.getSelectedFlightOut();
+        }
+ 
+        if (GUI.FlightList.getSelectedFlightHome() != null) {
+            flightHome = GUI.FlightList.getSelectedFlightHome();
+        }
+        
+        if (GUI.HotelList.getSelectedHotel() != null) {
+            hotel = GUI.HotelList.getSelectedHotel();
+        }
+        
+        if (GUI.TripList.getSelectedTrip() != null) {
+            tour = GUI.TripList.getSelectedTrip();
+        }
+        
+        other.UserInfo user = new other.UserInfo(BoxName.getText(), null, null, null, null, null);
+        GUI.Ticket.createTicket(TicketPanel, user, flightOut, flightHome, hotel, tour);
     }//GEN-LAST:event_SearchButton4ActionPerformed
 
     private void BoxNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxNameActionPerformed
@@ -1212,9 +1267,11 @@ public class MainFrame extends javax.swing.JFrame {
         if(ReturnCB.isSelected()){
             ReturnPanel.setVisible(true);
             TourResaults4.setVisible(true);
+            FlightResaultsP2.setVisible(true);
         } else {
             ReturnPanel.setVisible(false);
             TourResaults4.setVisible(false);
+            FlightResaultsP2.setVisible(false);
         }
     }//GEN-LAST:event_ReturnCBActionPerformed
 
@@ -1271,6 +1328,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField BoxName;
     private javax.swing.JCheckBox Fishing;
     private javax.swing.JPanel FlightResaultsP1;
+    private javax.swing.JPanel FlightResaultsP2;
     private javax.swing.JScrollPane Flights;
     private javax.swing.JComboBox FromDay;
     private javax.swing.JComboBox FromDay2;
@@ -1333,6 +1391,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel SearchOptions4;
     private javax.swing.JCheckBox Sightseeing;
     private javax.swing.JScrollPane Ticket;
+    private javax.swing.JPanel TicketPanel;
     private javax.swing.JComboBox ToDay;
     private javax.swing.JComboBox ToDay2;
     private javax.swing.JComboBox ToMonth;
@@ -1364,7 +1423,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane user;
     // End of variables declaration//GEN-END:variables
